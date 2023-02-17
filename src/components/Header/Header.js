@@ -27,12 +27,8 @@ const Header = (prop) => {
   const [search, setSearch] = useState('');
 
   const searchRef = createRef();
-  const bannerMessage = 'Free shipping worldwide';
-  const searchSuggestions = [
-    'Oversize sweaters',
-    'Lama Pajamas',
-    'Candles Cinnamon',
-  ];
+  const bannerMessage = 'Free Shipping Over £10';
+  const searchSuggestions = ['Beetle Patches', 'Frogs', 'Pin Badges'];
 
   const handleHover = (navObject) => {
     if (navObject.category) {
@@ -134,13 +130,6 @@ const Header = (prop) => {
               className={`${styles.iconContainer} ${styles.hideOnMobile}`}
             >
               <Icon symbol={'heart'}></Icon>
-            </Link>
-            <Link
-              aria-label="Orders"
-              href={isAuth() ? '/login' : '/account/orders/'}
-              className={`${styles.iconContainer} ${styles.hideOnMobile}`}
-            >
-              <Icon symbol={'user'}></Icon>
             </Link>
             <button
               aria-label="Cart"
